@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "title": "Guido Paris – Ingegnere Meccanico in Italia",
+    "description": "Ingegnere meccanico focalizzato su design for manufacturing, CAD/FEM, termofluidi e miglioramento operativo. Basato in Italia e aperto a opportunità in Europa."
+  },
+  "nav": {
+    "about": "Chi sono",
+    "skills": "Competenze",
+    "projects": "Progetti",
+    "experience": "Esperienza",
+    "education": "Formazione",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "title": "Guido Paris – Ingegnere Meccanico",
+    "subtitle": "Progettazione, simulazione e industrializzazione. Basato in Italia, disponibile per ruoli in tutta Europa.",
+    "primaryCta": "Scarica CV",
+    "secondaryCta": "Contattami"
+  },
+  "about": {
+    "title": "Chi sono",
+    "body": "Ingegnere meccanico con oltre 8 anni di esperienza nel consegnare componenti e assiemi robusti per macchine industriali, mobilità ed energia. Combino CAD, FEM e prototipazione con il coordinamento fornitori per rilasciare soluzioni producibili nei tempi. Mi piace tradurre requisiti in disegni chiari, validarli con simulazioni e guidare il miglioramento continuo in officina."
+  },
+  "skills": {
+    "title": "Competenze",
+    "categories": {
+      "cad": "Modellazione & CAD",
+      "fem": "FEM & Simulazione",
+      "manufacturing": "Produzione & Operations",
+      "energy": "Energia & Termofluidi",
+      "management": "Project & Qualità"
+    }
+  },
+  "projects": {
+    "title": "Progetti",
+    "subtitle": "Selezione aggiornata da Google Sheets: Guido può modificare titoli, descrizioni, tag e link senza nuove release."
+  },
+  "experience": {
+    "title": "Esperienza"
+  },
+  "education": {
+    "title": "Formazione"
+  },
+  "certifications": {
+    "title": "Certificazioni",
+    "optionalNote": "Certificazioni selezionate"
+  },
+  "contact": {
+    "title": "Contatti",
+    "emailLabel": "Email",
+    "linkedinLabel": "LinkedIn",
+    "formCta": "Invia un messaggio"
+  },
+  "footer": {
+    "cta": "Progettiamo prodotti affidabili insieme."
+  },
+  "langSwitcher": {
+    "aria": "Cambia lingua",
+    "it": "Italiano",
+    "en": "English"
+  }
+}
+

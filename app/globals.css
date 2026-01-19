@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+}
+
+a {
+  @apply text-steel underline-offset-4 hover:text-accent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  @apply outline outline-2 outline-offset-2 outline-accent;
+}
+

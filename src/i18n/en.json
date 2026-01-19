@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "title": "Guido Paris – Mechanical Engineer in Italy",
+    "description": "Mechanical engineer focused on design for manufacturing, CAD/FEM, thermofluids, and operational excellence. Based in Italy and open to European opportunities."
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Guido Paris – Mechanical Engineer",
+    "subtitle": "Design for manufacturing, simulation, and operations. Based in Italy and open to European opportunities.",
+    "primaryCta": "Download CV",
+    "secondaryCta": "Contact me"
+  },
+  "about": {
+    "title": "About",
+    "body": "Mechanical engineer with 8+ years delivering robust components and assemblies for industrial machinery, mobility, and energy systems. I combine CAD, FEM, and prototyping with supplier coordination to release manufacturable designs on time. I enjoy translating requirements into clear drawings, validating with simulation, and driving continuous improvement on the shop floor."
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "cad": "Modeling & CAD",
+      "fem": "FEM & Simulation",
+      "manufacturing": "Manufacturing & Operations",
+      "energy": "Energy & Thermofluids",
+      "management": "Project & Quality"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Highlighted work synced from Google Sheets so Guido can edit titles, descriptions, tags, and links without deployments."
+  },
+  "experience": {
+    "title": "Experience"
+  },
+  "education": {
+    "title": "Education"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "optionalNote": "Selected certifications"
+  },
+  "contact": {
+    "title": "Contact",
+    "emailLabel": "Email",
+    "linkedinLabel": "LinkedIn",
+    "formCta": "Send a message"
+  },
+  "footer": {
+    "cta": "Let’s build reliable products together."
+  },
+  "langSwitcher": {
+    "aria": "Change language",
+    "it": "Italiano",
+    "en": "English"
+  }
+}
+
