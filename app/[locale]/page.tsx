@@ -9,6 +9,7 @@ import { HeroSection } from "@/src/components/HeroSection";
 import { ProjectsSection } from "@/src/components/ProjectsSection";
 import { SkillsSection } from "@/src/components/SkillsSection";
 import { getDictionary } from "@/src/i18n/get-dictionary";
+import { defaultLocale, locales } from "@/src/i18n/settings";
 import type { Locale } from "@/src/i18n/settings";
 
 type PageProps = {
@@ -20,18 +21,18 @@ const skillsByLocale: Record<
   Record<string, string[]>
 > = {
   it: {
-    cad: ["Siemens NX", "SolidWorks", "CATIA V5", "GD&T", "Tolleranze e accoppiamenti"],
-    fem: ["Ansys Mechanical", "Nastran/Patran", "calcolo statico e fatica", "CFD di base"],
-    manufacturing: ["DFM/DFA", "lavorazioni meccaniche", "lamiera e saldature", "prototipazione rapida", "boM e distinta base"],
-    energy: ["termofluidi", "scambiatori di calore", "macchine rotanti", "analisi energetiche"],
-    management: ["APQP", "FMEA di processo", "PPAP", "Lean & Kaizen", "gestione fornitori"]
+    cad: ["SolidWorks", "AutoCAD", "Inventor", "modellazione 3D", "disegno tecnico"],
+    fem: ["lettura disegni", "tolleranze", "messa in tavola"],
+    manufacturing: ["lamiera e piegatura", "taglio e assemblaggio", "distinte base", "documentazione di produzione"],
+    energy: ["progettazione industriale", "installazioni architettoniche", "progetti per mining"],
+    management: ["collaborazione con architetti", "coordinamento produzione", "gestione requisiti"]
   },
   en: {
-    cad: ["Siemens NX", "SolidWorks", "CATIA V5", "GD&T", "Fits and tolerances"],
-    fem: ["Ansys Mechanical", "Nastran/Patran", "static & fatigue", "CFD basics"],
-    manufacturing: ["DFM/DFA", "machining", "sheet metal & welding", "rapid prototyping", "BOM management"],
-    energy: ["thermofluids", "heat exchangers", "rotating machinery", "energy audits"],
-    management: ["APQP", "Process FMEA", "PPAP", "Lean & Kaizen", "supplier coordination"]
+    cad: ["SolidWorks", "AutoCAD", "Inventor", "3D modeling", "technical drawing"],
+    fem: ["drawing interpretation", "tolerances", "drafting standards"],
+    manufacturing: ["sheet metal & bending", "cutting & assembly", "BOMs", "production documentation"],
+    energy: ["industrial design", "architectural installations", "mining equipment projects"],
+    management: ["architect collaboration", "production coordination", "requirements management"]
   }
 };
 
@@ -41,71 +42,101 @@ const experienceByLocale: Record<
 > = {
   it: [
     {
-      role: "Senior Mechanical Engineer",
-      company: "Armonia Industrial Systems",
-      period: "2022 – Presente",
-      location: "Milano, Italia",
+      role: "Industrial Designer",
+      company: "Uptalent.io",
+      period: "lug 2023 – Presente",
+      location: "Argentina",
       bullets: [
-        "Lead design per linee di assemblaggio: layout, cinematismi e validazione FEM.",
-        "Riduzione costi -12% tramite standardizzazione componenti e ottimizzazione distinte.",
-        "Coordinamento con fornitori per prototipi e preserie, audit di processo e qualità."
+        "Sviluppo di disegni tecnici e documentazione per la produzione.",
+        "Supporto a progetti industriali con modellazione 3D e layout di assemblaggio."
       ]
     },
     {
-      role: "Mechanical Design Engineer",
-      company: "Vela Mobility",
-      period: "2018 – 2022",
-      location: "Torino, Italia",
+      role: "Project Engineering",
+      company: "Arktura",
+      period: "ott 2021 – set 2023",
+      location: "Córdoba, Argentina",
       bullets: [
-        "Progettazione strutture leggere e staffe per veicoli elettrici con requisiti NVH.",
-        "Introduzione libreria CAD modulare che ha ridotto i tempi di progettazione del 20%.",
-        "Collaborazione con test e validazione per chiusura issue log e azioni correttive."
+        "Collaborazione con architetti per definire soluzioni producibili.",
+        "Creazione di programmi e documentazione per taglio, piega e assemblaggio."
       ]
     },
     {
-      role: "Junior Engineer",
-      company: "Energia Blu",
-      period: "2016 – 2018",
-      location: "Bologna, Italia",
+      role: "Progettista meccanico",
+      company: "TECMAQ S.R.L.",
+      period: "gen 2019 – ott 2021",
+      location: "Argentina",
       bullets: [
-        "Dimensionamento scambiatori e piping per impianti termici industriali.",
-        "Supporto gare tecniche con schemi P&ID e stime materiali.",
-        "Monitoraggio KPI di efficienza energetica e manutenzione predittiva."
+        "Progetti per il settore minerario con SolidWorks e AutoCAD.",
+        "Calcoli e disegni tecnici per componenti e assiemi."
+      ]
+    },
+    {
+      role: "Progettista reti telefoniche (autonomo)",
+      company: "Freelance",
+      period: "mar 2017 – feb 2019",
+      location: "Argentina",
+      bullets: [
+        "Progettazione di reti e layout tecnici per infrastrutture telefoniche."
+      ]
+    },
+    {
+      role: "Assistente di ingegneria",
+      company: "Tecnicord S.A.",
+      period: "mar 2014 – gen 2017",
+      location: "Argentina",
+      bullets: [
+        "Ingegneria di prodotto e disegno in Inventor e AutoCAD."
       ]
     }
   ],
   en: [
     {
-      role: "Senior Mechanical Engineer",
-      company: "Armonia Industrial Systems",
-      period: "2022 – Present",
-      location: "Milan, Italy",
+      role: "Industrial Designer",
+      company: "Uptalent.io",
+      period: "Jul 2023 – Present",
+      location: "Argentina",
       bullets: [
-        "Lead design for assembly lines: layouts, mechanisms, and FEM validation.",
-        "Cut costs by 12% through component standardization and BOM optimization.",
-        "Coordinated suppliers for prototypes and pre-series, including process and quality audits."
+        "Produce technical drawings and production documentation.",
+        "Support industrial projects with 3D modeling and assembly layouts."
       ]
     },
     {
-      role: "Mechanical Design Engineer",
-      company: "Vela Mobility",
-      period: "2018 – 2022",
-      location: "Turin, Italy",
+      role: "Project Engineering",
+      company: "Arktura",
+      period: "Oct 2021 – Sep 2023",
+      location: "Córdoba, Argentina",
       bullets: [
-        "Designed lightweight structures and brackets for EV platforms under NVH constraints.",
-        "Introduced a modular CAD library reducing design time by 20%.",
-        "Worked with testing and validation to close issue logs and corrective actions."
+        "Partnered with architects to enable manufacturable solutions.",
+        "Created programs and documentation for cutting, bending, and assembly."
       ]
     },
     {
-      role: "Junior Engineer",
-      company: "Energia Blu",
-      period: "2016 – 2018",
-      location: "Bologna, Italy",
+      role: "Mechanical Designer",
+      company: "TECMAQ S.R.L.",
+      period: "Jan 2019 – Oct 2021",
+      location: "Argentina",
       bullets: [
-        "Sized heat exchangers and piping for industrial thermal plants.",
-        "Supported technical bids with P&ID diagrams and material estimates.",
-        "Tracked energy efficiency KPIs and predictive maintenance tasks."
+        "Mining industry projects using SolidWorks and AutoCAD.",
+        "Technical calculations and drawings for components and assemblies."
+      ]
+    },
+    {
+      role: "Telecom Network Designer (Freelance)",
+      company: "Self-employed",
+      period: "Mar 2017 – Feb 2019",
+      location: "Argentina",
+      bullets: [
+        "Designed layouts and technical plans for telephone networks."
+      ]
+    },
+    {
+      role: "Engineering Assistant",
+      company: "Tecnicord S.A.",
+      period: "Mar 2014 – Jan 2017",
+      location: "Argentina",
+      bullets: [
+        "Product engineering and drafting using Inventor and AutoCAD."
       ]
     }
   ]
@@ -148,11 +179,12 @@ const certificationsByLocale: Record<Locale, string[]> = {
 };
 
 export default async function Home({ params }: PageProps) {
-  const dictionary = await getDictionary(params.locale);
-  const skills = skillsByLocale[params.locale];
-  const experience = experienceByLocale[params.locale];
-  const education = educationByLocale[params.locale];
-  const certifications = certificationsByLocale[params.locale];
+  const locale = locales.includes(params.locale) ? params.locale : defaultLocale;
+  const dictionary = await getDictionary(locale);
+  const skills = skillsByLocale[locale] ?? skillsByLocale[defaultLocale];
+  const experience = experienceByLocale[locale] ?? experienceByLocale[defaultLocale];
+  const education = educationByLocale[locale] ?? educationByLocale[defaultLocale];
+  const certifications = certificationsByLocale[locale] ?? certificationsByLocale[defaultLocale];
 
   const navLinks = [
     { href: "#about", label: dictionary.nav.about },
@@ -170,11 +202,11 @@ export default async function Home({ params }: PageProps) {
   return (
     <>
       <Header
-        locale={params.locale}
+        locale={locale}
         navLinks={navLinks}
         cvLink={cvLink}
         primaryCtaLabel={dictionary.hero.primaryCta}
-        roleLabel={params.locale === "it" ? "Ingegnere Meccanico" : "Mechanical Engineer"}
+        roleLabel={locale === "it" ? "Ingegnere Meccanico" : "Mechanical Engineer"}
         name="Guido Paris"
         switcherLabels={{
           it: dictionary.langSwitcher.it,
@@ -197,14 +229,14 @@ export default async function Home({ params }: PageProps) {
 
         <SkillsSection
           title={dictionary.skills.title}
-          categories={Object.entries(skills).map(([key, items]) => ({
+          categories={Object.entries(skills ?? {}).map(([key, items]) => ({
             label: dictionary.skills.categories[key as keyof typeof dictionary.skills.categories],
             items
           }))}
         />
 
         <ProjectsSection
-          locale={params.locale}
+          locale={locale}
           title={dictionary.projects.title}
           subtitle={dictionary.projects.subtitle}
         />
@@ -222,7 +254,7 @@ export default async function Home({ params }: PageProps) {
         <ContactSection
           title={dictionary.contact.title}
           description={
-            params.locale === "it"
+            locale === "it"
               ? "Disponibile per ruoli full-time o consulenze in Italia ed Europa."
               : "Available for full-time roles or consulting in Italy and across Europe."
           }

@@ -12,6 +12,15 @@ type Props = {
 const FALLBACK_IMAGE =
   "https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=1200&q=60";
 
+function resolveImageUrl(imageUrl?: string) {
+  if (!imageUrl) return FALLBACK_IMAGE;
+  if (imageUrl.includes("drive.google.com/uc")) {
+    const id = new URL(imageUrl).searchParams.get("id");
+    if (id) return `/api/drive-image?id=${id}`;
+  }
+  return imageUrl;
+}
+
 async function fetchProjects(locale: Locale): Promise<ProjectRecord[]> {
   const base =
     process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || "http://localhost:3000";
@@ -39,7 +48,7 @@ export async function ProjectsSection({ locale, title, subtitle }: Props) {
             <p className="mt-2 text-slate-600">{subtitle}</p>
           </div>
           <div className="hidden text-sm text-slate-500 sm:block">
-            Google Sheets → API → Next.js (caché ~15 min)
+            Google Drive → API → Next.js (caché ~15 min)
           </div>
         </div>
 
@@ -51,7 +60,7 @@ export async function ProjectsSection({ locale, title, subtitle }: Props) {
             >
               <div className="relative aspect-[16/9] bg-cloud">
                 <Image
-                  src={project.imageUrl || FALLBACK_IMAGE}
+                  src={resolveImageUrl(project.imageUrl)}
                   alt={project.title}
                   fill
                   className="object-cover"

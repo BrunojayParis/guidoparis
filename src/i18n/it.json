@@ -19,7 +19,7 @@
   },
   "about": {
     "title": "Chi sono",
-    "body": "Ingegnere meccanico con oltre 8 anni di esperienza nel consegnare componenti e assiemi robusti per macchine industriali, mobilità ed energia. Combino CAD, FEM e prototipazione con il coordinamento fornitori per rilasciare soluzioni producibili nei tempi. Mi piace tradurre requisiti in disegni chiari, validarli con simulazioni e guidare il miglioramento continuo in officina."
+    "body": "Ingegnere meccanico e industrial designer focalizzato su progettazione prodotto, disegno tecnico e soluzioni producibili. Collaboro con architetti e stakeholder per tradurre requisiti in modelli CAD, documentazione di produzione e piani di assemblaggio. Esperienza in impianti per il settore minerario, installazioni architettoniche e progetti industriali, con consegna end-to-end dalla concept alla fabbricazione."
   },
   "skills": {
     "title": "Competenze",
@@ -33,7 +33,7 @@
   },
   "projects": {
     "title": "Progetti",
-    "subtitle": "Selezione aggiornata da Google Sheets: Guido può modificare titoli, descrizioni, tag e link senza nuove release."
+    "subtitle": "Selezione aggiornata da Google Drive: ogni cartella progetto contiene JPG e un file description.txt."
   },
   "experience": {
     "title": "Esperienza"
