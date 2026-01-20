@@ -21,18 +21,18 @@ const skillsByLocale: Record<
   Record<string, string[]>
 > = {
   it: {
-    cad: ["SolidWorks", "AutoCAD", "Inventor", "modellazione 3D", "disegno tecnico"],
-    fem: ["lettura disegni", "tolleranze", "messa in tavola"],
-    manufacturing: ["lamiera e piegatura", "taglio e assemblaggio", "distinte base", "documentazione di produzione"],
-    energy: ["progettazione industriale", "installazioni architettoniche", "progetti per mining"],
-    management: ["collaborazione con architetti", "coordinamento produzione", "gestione requisiti"]
+    cad: ["SolidWorks", "AutoCAD / Inventor", "CAD/CAM", "FARO", "Microsoft Office", "Gantter"],
+    fem: ["disegno tecnico", "messa in tavola", "lettura disegni", "tolleranze dimensionali"],
+    manufacturing: ["progettazione meccanica", "sviluppo prodotto", "calcoli strutturali", "documentazione di produzione"],
+    energy: ["componenti architettonici", "macchinari per mining", "tubazioni per macchine agricole"],
+    management: ["Spagnolo", "Inglese", "Italiano"]
   },
   en: {
-    cad: ["SolidWorks", "AutoCAD", "Inventor", "3D modeling", "technical drawing"],
-    fem: ["drawing interpretation", "tolerances", "drafting standards"],
-    manufacturing: ["sheet metal & bending", "cutting & assembly", "BOMs", "production documentation"],
-    energy: ["industrial design", "architectural installations", "mining equipment projects"],
-    management: ["architect collaboration", "production coordination", "requirements management"]
+    cad: ["SolidWorks", "AutoCAD / Inventor", "CAD/CAM", "FARO", "Microsoft Office", "Gantter"],
+    fem: ["technical drawing", "drafting standards", "drawing interpretation", "dimensional tolerances"],
+    manufacturing: ["mechanical design", "product development", "structural calculations", "production documentation"],
+    energy: ["architectural components", "mining equipment", "agricultural machinery piping"],
+    management: ["Spanish", "English", "Italian"]
   }
 };
 
@@ -42,101 +42,65 @@ const experienceByLocale: Record<
 > = {
   it: [
     {
-      role: "Industrial Designer",
-      company: "Uptalent.io",
-      period: "lug 2023 – Presente",
-      location: "Argentina",
+      role: "Progettazione architettonica",
+      company: "Arktura (fino al 2022) – Ferra Designs (attuale)",
+      period: "2021 – Presente",
+      location: "Remote",
       bullets: [
-        "Sviluppo di disegni tecnici e documentazione per la produzione.",
-        "Supporto a progetti industriali con modellazione 3D e layout di assemblaggio."
+        "Traduzione degli obiettivi del cliente in soluzioni realizzabili e funzionali.",
+        "Progettazione di porte, serramenti, scale e altri elementi architettonici."
       ]
     },
     {
-      role: "Project Engineering",
-      company: "Arktura",
-      period: "ott 2021 – set 2023",
-      location: "Córdoba, Argentina",
+      role: "Progettazione meccanica e gestione progetti",
+      company: "Tecnicord S.A. – Tecmaq S.R.L.",
+      period: "2014 – 2021",
+      location: "Argentina",
       bullets: [
-        "Collaborazione con architetti per definire soluzioni producibili.",
-        "Creazione di programmi e documentazione per taglio, piega e assemblaggio."
+        "Sviluppo prodotto, calcoli strutturali, visite in fabbrica e presso clienti.",
+        "Progettazione di macchine e impianti per frantumazione di inerti e cave."
       ]
     },
     {
-      role: "Progettista meccanico",
-      company: "TECMAQ S.R.L.",
-      period: "gen 2019 – ott 2021",
+      role: "Tecnico / disegnatore",
+      company: "Università – Piro",
+      period: "2010 – 2014",
       location: "Argentina",
       bullets: [
-        "Progetti per il settore minerario con SolidWorks e AutoCAD.",
-        "Calcoli e disegni tecnici per componenti e assiemi."
-      ]
-    },
-    {
-      role: "Progettista reti telefoniche (autonomo)",
-      company: "Freelance",
-      period: "mar 2017 – feb 2019",
-      location: "Argentina",
-      bullets: [
-        "Progettazione di reti e layout tecnici per infrastrutture telefoniche."
-      ]
-    },
-    {
-      role: "Assistente di ingegneria",
-      company: "Tecnicord S.A.",
-      period: "mar 2014 – gen 2017",
-      location: "Argentina",
-      bullets: [
-        "Ingegneria di prodotto e disegno in Inventor e AutoCAD."
+        "Assistente di ricerca in vibrazioni meccaniche e tecnico in produzione.",
+        "Disegni per lamiera piegata, progettazione dispositivi e manutenzione."
       ]
     }
   ],
   en: [
     {
-      role: "Industrial Designer",
-      company: "Uptalent.io",
-      period: "Jul 2023 – Present",
-      location: "Argentina",
+      role: "Architectural Design",
+      company: "Arktura (until 2022) – Ferra Designs (current)",
+      period: "2021 – Present",
+      location: "Remote",
       bullets: [
-        "Produce technical drawings and production documentation.",
-        "Support industrial projects with 3D modeling and assembly layouts."
+        "Translate client goals into buildable and functional solutions.",
+        "Design doors, windows, staircases, and other architectural elements."
       ]
     },
     {
-      role: "Project Engineering",
-      company: "Arktura",
-      period: "Oct 2021 – Sep 2023",
-      location: "Córdoba, Argentina",
+      role: "Mechanical Design & Project Managing",
+      company: "Tecnicord S.A. – Tecmaq S.R.L.",
+      period: "2014 – 2021",
+      location: "Argentina",
       bullets: [
-        "Partnered with architects to enable manufacturable solutions.",
-        "Created programs and documentation for cutting, bending, and assembly."
+        "Product development, structural calculations, factory and client visits.",
+        "Design of machines and aggregate crushing plants (quarries)."
       ]
     },
     {
-      role: "Mechanical Designer",
-      company: "TECMAQ S.R.L.",
-      period: "Jan 2019 – Oct 2021",
+      role: "Technician / Draftsman",
+      company: "University – Piro",
+      period: "2010 – 2014",
       location: "Argentina",
       bullets: [
-        "Mining industry projects using SolidWorks and AutoCAD.",
-        "Technical calculations and drawings for components and assemblies."
-      ]
-    },
-    {
-      role: "Telecom Network Designer (Freelance)",
-      company: "Self-employed",
-      period: "Mar 2017 – Feb 2019",
-      location: "Argentina",
-      bullets: [
-        "Designed layouts and technical plans for telephone networks."
-      ]
-    },
-    {
-      role: "Engineering Assistant",
-      company: "Tecnicord S.A.",
-      period: "Mar 2014 – Jan 2017",
-      location: "Argentina",
-      bullets: [
-        "Product engineering and drafting using Inventor and AutoCAD."
+        "Mechanical vibrations research assistant and production technician.",
+        "Drafted bent sheet metal parts, device design, and maintenance tasks."
       ]
     }
   ]
@@ -146,36 +110,36 @@ const educationByLocale: Record<Locale, Array<{ title: string; school: string; p
   it: [
     {
       title: "Laurea Magistrale in Ingegneria Meccanica",
-      school: "Politecnico di Torino",
-      period: "2014 – 2016",
-      location: "Torino, Italia"
+      school: "Università Tecnologica Nazionale",
+      period: "2009 – 2021",
+      location: "Argentina"
     },
     {
-      title: "Laurea Triennale in Ingegneria Industriale",
-      school: "Università di Bologna",
-      period: "2011 – 2014",
-      location: "Bologna, Italia"
+      title: "Diploma di Perito Tecnico Meccanico",
+      school: "Instituto Tecnico Salesiano Villada",
+      period: "2003 – 2008",
+      location: "Argentina"
     }
   ],
   en: [
     {
-      title: "MSc in Mechanical Engineering",
-      school: "Politecnico di Torino",
-      period: "2014 – 2016",
-      location: "Turin, Italy"
+      title: "Master's Degree in Mechanical Engineering",
+      school: "Technological National University",
+      period: "2009 – 2021",
+      location: "Argentina"
     },
     {
-      title: "BSc in Industrial Engineering",
-      school: "University of Bologna",
-      period: "2011 – 2014",
-      location: "Bologna, Italy"
+      title: "Technical High School Diploma in Mechanical Engineering",
+      school: "Salesian Technical Institute Villada",
+      period: "2003 – 2008",
+      location: "Argentina"
     }
   ]
 };
 
 const certificationsByLocale: Record<Locale, string[]> = {
-  it: ["Certificazione Six Sigma Green Belt", "Corso avanzato GD&T", "Fondamenti di gestione progetti (PMI)"],
-  en: ["Six Sigma Green Belt", "Advanced GD&T course", "Project management fundamentals (PMI)"]
+  it: ["SolidWorks", "AutoCAD / Inventor", "FARO", "CAD/CAM", "Microsoft Office", "Gantter"],
+  en: ["SolidWorks", "AutoCAD / Inventor", "FARO", "CAD/CAM", "Microsoft Office", "Gantter"]
 };
 
 export default async function Home({ params }: PageProps) {
@@ -195,9 +159,9 @@ export default async function Home({ params }: PageProps) {
     { href: "#contact", label: dictionary.nav.contact }
   ];
 
-  const cvLink = "https://example.com/Guido_Paris_CV.pdf";
-  const email = "guido.paris@email.com";
-  const linkedin = "https://www.linkedin.com/in/guido-paris";
+  const cvLink = "https://example.com/Guido_Gabriel_Paris_CV.pdf";
+  const email = "guidogparis@gmail.com";
+  const linkedin = "https://www.linkedin.com/in/guido-gabriel-paris-7745871aa";
 
   return (
     <>
@@ -207,7 +171,7 @@ export default async function Home({ params }: PageProps) {
         cvLink={cvLink}
         primaryCtaLabel={dictionary.hero.primaryCta}
         roleLabel={locale === "it" ? "Ingegnere Meccanico" : "Mechanical Engineer"}
-        name="Guido Paris"
+        name="Guido Gabriel Paris"
         switcherLabels={{
           it: dictionary.langSwitcher.it,
           en: dictionary.langSwitcher.en,
@@ -255,8 +219,8 @@ export default async function Home({ params }: PageProps) {
           title={dictionary.contact.title}
           description={
             locale === "it"
-              ? "Disponibile per ruoli full-time o consulenze in Italia ed Europa."
-              : "Available for full-time roles or consulting in Italy and across Europe."
+              ? "Residente a Ragusa, Italia. Tel: +54 9 351 661 8834 | +39 351 348 5795"
+              : "Based in Ragusa, Italy. Phone: +54 9 351 661 8834 | +39 351 348 5795"
           }
           emailLabel={dictionary.contact.emailLabel}
           email={email}

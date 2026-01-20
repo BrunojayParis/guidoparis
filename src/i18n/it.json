@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Guido Paris – Ingegnere Meccanico in Italia",
-    "description": "Ingegnere meccanico focalizzato su design for manufacturing, CAD/FEM, termofluidi e miglioramento operativo. Basato in Italia e aperto a opportunità in Europa."
+    "title": "Guido Gabriel Paris – Ingegnere Meccanico in Italia",
+    "description": "Ingegnere meccanico con oltre 10 anni nella progettazione meccanica e nel disegno tecnico. Basato a Ragusa, Italia."
   },
   "nav": {
     "about": "Chi sono",
@@ -12,23 +12,23 @@
     "contact": "Contatti"
   },
   "hero": {
-    "title": "Guido Paris – Ingegnere Meccanico",
-    "subtitle": "Progettazione, simulazione e industrializzazione. Basato in Italia, disponibile per ruoli in tutta Europa.",
+    "title": "Guido Gabriel Paris – Ingegnere Meccanico",
+    "subtitle": "Progettazione meccanica e disegno tecnico con oltre 10 anni di esperienza. Basato a Ragusa, Italia.",
     "primaryCta": "Scarica CV",
     "secondaryCta": "Contattami"
   },
   "about": {
     "title": "Chi sono",
-    "body": "Ingegnere meccanico e industrial designer focalizzato su progettazione prodotto, disegno tecnico e soluzioni producibili. Collaboro con architetti e stakeholder per tradurre requisiti in modelli CAD, documentazione di produzione e piani di assemblaggio. Esperienza in impianti per il settore minerario, installazioni architettoniche e progetti industriali, con consegna end-to-end dalla concept alla fabbricazione."
+    "body": "Ingegnere meccanico con oltre 10 anni di esperienza nella progettazione meccanica e in contesti produttivi. Specializzato nel trasformare idee in soluzioni realizzabili tramite modellazione CAD, disegno tecnico e documentazione di officina. Esperienza in componenti architettonici, macchinari per il settore minerario e progetti industriali, collaborando con clienti e produzione dalla concept alla fabbricazione."
   },
   "skills": {
     "title": "Competenze",
     "categories": {
-      "cad": "Modellazione & CAD",
-      "fem": "FEM & Simulazione",
-      "manufacturing": "Produzione & Operations",
-      "energy": "Energia & Termofluidi",
-      "management": "Project & Qualità"
+      "cad": "Software & CAD",
+      "fem": "Disegno Tecnico",
+      "manufacturing": "Progettazione Meccanica",
+      "energy": "Settori di Esperienza",
+      "management": "Lingue"
     }
   },
   "projects": {
@@ -42,8 +42,8 @@
     "title": "Formazione"
   },
   "certifications": {
-    "title": "Certificazioni",
-    "optionalNote": "Certificazioni selezionate"
+    "title": "Software",
+    "optionalNote": "Strumenti principali"
   },
   "contact": {
     "title": "Contatti",

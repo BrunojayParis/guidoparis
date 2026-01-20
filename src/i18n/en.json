@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Guido Paris – Mechanical Engineer in Italy",
-    "description": "Mechanical engineer focused on design for manufacturing, CAD/FEM, thermofluids, and operational excellence. Based in Italy and open to European opportunities."
+    "title": "Guido Gabriel Paris – Mechanical Engineer in Italy",
+    "description": "Mechanical engineer with 10+ years in mechanical design, technical drawing, and production environments. Based in Ragusa, Italy."
   },
   "nav": {
     "about": "About",
@@ -12,23 +12,23 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Guido Paris – Mechanical Engineer",
-    "subtitle": "Design for manufacturing, simulation, and operations. Based in Italy and open to European opportunities.",
+    "title": "Guido Gabriel Paris – Mechanical Engineer",
+    "subtitle": "Mechanical design and technical drawing with 10+ years of experience. Based in Ragusa, Italy.",
     "primaryCta": "Download CV",
     "secondaryCta": "Contact me"
   },
   "about": {
     "title": "About",
-    "body": "Mechanical engineer and industrial designer focused on product design, technical drawings, and manufacturable solutions. I collaborate with architects and stakeholders to translate requirements into precise CAD models, production documentation, and assembly plans. My experience spans mining equipment, architectural installations, and industrial projects, with strong hands-on delivery from concept to fabrication."
+    "body": "Mechanical engineer with over 10 years in mechanical design and production environments. I specialize in turning ideas into manufacturable solutions through precise CAD modeling, technical drawings, and shop-ready documentation. My experience covers architectural components, mining equipment, and industrial projects, working closely with clients and production teams from concept to fabrication."
   },
   "skills": {
     "title": "Skills",
     "categories": {
-      "cad": "Modeling & CAD",
-      "fem": "FEM & Simulation",
-      "manufacturing": "Manufacturing & Operations",
-      "energy": "Energy & Thermofluids",
-      "management": "Project & Quality"
+      "cad": "Software & CAD",
+      "fem": "Technical Drawing",
+      "manufacturing": "Mechanical Design",
+      "energy": "Industry Experience",
+      "management": "Languages"
     }
   },
   "projects": {
@@ -42,8 +42,8 @@
     "title": "Education"
   },
   "certifications": {
-    "title": "Certifications",
-    "optionalNote": "Selected certifications"
+    "title": "Software",
+    "optionalNote": "Main tools"
   },
   "contact": {
     "title": "Contact",
