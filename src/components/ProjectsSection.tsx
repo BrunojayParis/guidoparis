@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { headers } from "next/headers";
 import type { Locale } from "@/src/i18n/settings";
 import type { ProjectRecord } from "@/src/types/projects";
 
@@ -22,18 +23,30 @@ function resolveImageUrl(imageUrl?: string) {
 }
 
 async function fetchProjects(locale: Locale): Promise<ProjectRecord[]> {
-  const base =
-    process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || "http://localhost:3000";
-  const res = await fetch(`${base}/api/projects?locale=${locale}`, {
-    next: { revalidate: 900 }
-  });
+  try {
+    const headerStore = headers();
+    const host =
+      headerStore.get("x-forwarded-host") || headerStore.get("host") || "";
+    const protocol = headerStore.get("x-forwarded-proto") || "https";
+    const base =
+      host.length > 0
+        ? `${protocol}://${host}`
+        : process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || "http://localhost:3000";
 
-  if (!res.ok) {
-    console.error("Failed to load projects", res.status);
+    const res = await fetch(`${base}/api/projects?locale=${locale}`, {
+      next: { revalidate: 900 }
+    });
+
+    if (!res.ok) {
+      console.error("Failed to load projects", res.status);
+      return [];
+    }
+
+    return (await res.json()) as ProjectRecord[];
+  } catch (error) {
+    console.error("Failed to load projects", error);
     return [];
   }
-
-  return (await res.json()) as ProjectRecord[];
 }
 
 export async function ProjectsSection({ locale, title, subtitle }: Props) {
