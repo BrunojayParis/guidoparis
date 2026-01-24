@@ -33,7 +33,7 @@
   },
   "projects": {
     "title": "Projects",
-    "subtitle": "Selected work synced from Google Drive: each project folder contains JPG images and a description.txt file."
+    "subtitle": "My selection of mechanical design projects"
   },
   "experience": {
     "title": "Experience"
@@ -60,4 +60,3 @@
     "en": "English"
   }
 }
-
