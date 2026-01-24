@@ -28,10 +28,11 @@ async function fetchProjects(locale: Locale): Promise<ProjectRecord[]> {
     const host =
       headerStore.get("x-forwarded-host") || headerStore.get("host") || "";
     const protocol = headerStore.get("x-forwarded-proto") || "https";
+    const vercelUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "";
     const base =
       host.length > 0
         ? `${protocol}://${host}`
-        : process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || "http://localhost:3000";
+        : vercelUrl || process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || "http://localhost:3000";
 
     const res = await fetch(`${base}/api/projects?locale=${locale}`, {
       next: { revalidate: 900 }
@@ -117,8 +118,8 @@ export async function ProjectsSection({ locale, title, subtitle }: Props) {
           {projects.length === 0 && (
             <p className="rounded-lg border border-amber-200 bg-amber-50 p-4 text-amber-800">
               {locale === "it"
-                ? "Nessun progetto disponibile al momento. Controlla la connessione al Google Sheet."
-                : "No projects available right now. Check the connection to Google Sheets."}
+                ? "Nessun progetto disponibile al momento. Controlla la connessione a Google Drive."
+                : "No projects available right now. Check the connection to Google Drive."}
             </p>
           )}
         </div>
