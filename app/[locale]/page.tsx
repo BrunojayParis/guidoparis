@@ -191,18 +191,18 @@ export default async function Home({ params }: PageProps) {
 
         <AboutSection title={dictionary.about.title} body={dictionary.about.body} />
 
+        <ProjectsSection
+          locale={locale}
+          title={dictionary.projects.title}
+          subtitle={dictionary.projects.subtitle}
+        />
+
         <SkillsSection
           title={dictionary.skills.title}
           categories={Object.entries(skills ?? {}).map(([key, items]) => ({
             label: dictionary.skills.categories[key as keyof typeof dictionary.skills.categories],
             items
           }))}
-        />
-
-        <ProjectsSection
-          locale={locale}
-          title={dictionary.projects.title}
-          subtitle={dictionary.projects.subtitle}
         />
 
         <ExperienceSection title={dictionary.experience.title} items={experience} />

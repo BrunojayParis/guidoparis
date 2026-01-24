@@ -54,7 +54,7 @@ export async function ProjectsSection({ locale, title, subtitle }: Props) {
   const projects = await fetchProjects(locale);
 
   return (
-    <section id="projects" className="py-16 sm:py-20">
+    <section id="projects" className="bg-slate-100 py-16 sm:py-20">
       <div className="mx-auto max-w-5xl px-4">
         <div className="mb-6 flex items-start justify-between gap-4">
           <div>
@@ -62,7 +62,6 @@ export async function ProjectsSection({ locale, title, subtitle }: Props) {
             <p className="mt-2 text-slate-600">{subtitle}</p>
           </div>
           <div className="hidden text-sm text-slate-500 sm:block">
-            Google Drive → API → Next.js (caché ~15 min)
           </div>
         </div>
 
