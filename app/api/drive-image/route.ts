@@ -24,17 +24,34 @@ async function getAuthClient() {
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const id = searchParams.get("id");
+  const rootFolderId = process.env.GOOGLE_DRIVE_ROOT_FOLDER_ID;
 
     if (!id) {
         return NextResponse.json({ error: "Missing id" }, { status: 400 });
     }
 
+  if (!rootFolderId) {
+    return NextResponse.json({ error: "Missing root folder id" }, { status: 500 });
+  }
+
     try {
         const auth = await getAuthClient();
         const drive = google.drive({ version: "v3", auth });
 
+    const meta = await drive.files.get({
+      fileId: id,
+      fields: "id, parents, mimeType",
+      includeItemsFromAllDrives: true,
+      supportsAllDrives: true
+    });
+
+    const parents = meta.data.parents ?? [];
+    if (!parents.includes(rootFolderId)) {
+      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+    }
+
         const res = await drive.files.get(
-            { fileId: id, alt: "media" },
+      { fileId: id, alt: "media", includeItemsFromAllDrives: true, supportsAllDrives: true },
             { responseType: "arraybuffer" }
         );
 

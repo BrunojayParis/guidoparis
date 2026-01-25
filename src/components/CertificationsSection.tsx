@@ -6,7 +6,7 @@ type Props = {
 
 export function CertificationsSection({ title, note, items }: Props) {
   return (
-    <section className="bg-cloud/60 py-14 sm:py-16">
+    <section id="certifications" className="bg-cloud/60 py-14 sm:py-16">
       <div className="mx-auto max-w-4xl px-4">
         <h2 className="text-3xl font-semibold text-steel">{title}</h2>
         <p className="mt-2 text-sm text-slate-500">{note}</p>

@@ -67,7 +67,15 @@ export default async function LocaleLayout({ children, params }: Props) {
       <Script id="person-jsonld" type="application/ld+json">
         {JSON.stringify(jsonLd)}
       </Script>
-      <main className="min-h-screen bg-white text-slate-900">{children}</main>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-steel focus:shadow-card"
+      >
+        {params.locale === "it" ? "Vai al contenuto" : "Skip to content"}
+      </a>
+      <main id="main-content" className="min-h-screen bg-white text-slate-900">
+        {children}
+      </main>
     </>
   );
 }

@@ -24,7 +24,7 @@ export function ContactSection({
       <div className="mx-auto max-w-4xl px-4 text-center">
         <h2 className="text-3xl font-semibold text-steel">{title}</h2>
         <p className="mt-3 text-lg text-slate-700">{description}</p>
-        <div className="mt-6 flex flex-col items-center gap-3">
+        <address className="mt-6 flex flex-col items-center gap-3 not-italic">
           <Link href={`mailto:${email}`} className="text-base font-semibold text-steel hover:text-accent">
             {emailLabel}: {email}
           </Link>
@@ -42,7 +42,7 @@ export function ContactSection({
           >
             {formCta}
           </Link>
-        </div>
+        </address>
       </div>
     </section>
   );

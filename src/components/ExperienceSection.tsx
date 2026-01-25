@@ -25,7 +25,7 @@ export function ExperienceSection({ title, items }: Props) {
               <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                 <h3 className="text-xl font-semibold text-steel">{item.role}</h3>
                 <p className="text-sm text-slate-500">
-                  {item.period} • {item.location}
+                  <time>{item.period}</time> • {item.location}
                 </p>
               </div>
               <p className="text-slate-700">{item.company}</p>
