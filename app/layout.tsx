@@ -5,7 +5,7 @@ import "./globals.css";
 import { defaultLocale, locales } from "@/src/i18n/settings";
 import type { Locale } from "@/src/i18n/settings";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 function resolveLocale(): Locale {
   const cookieLocale = cookies().get("NEXT_LOCALE")?.value;
