@@ -41,7 +41,6 @@ export async function GET(request: Request) {
     const meta = await drive.files.get({
       fileId: id,
       fields: "id, parents, mimeType",
-      includeItemsFromAllDrives: true,
       supportsAllDrives: true
     });
 
@@ -50,8 +49,8 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
-        const res = await drive.files.get(
-      { fileId: id, alt: "media", includeItemsFromAllDrives: true, supportsAllDrives: true },
+    const res = await drive.files.get(
+      { fileId: id, alt: "media", supportsAllDrives: true },
             { responseType: "arraybuffer" }
         );
 
