@@ -38,14 +38,40 @@ export async function GET(request: Request) {
         const auth = await getAuthClient();
         const drive = google.drive({ version: "v3", auth });
 
-    const meta = await drive.files.get({
-      fileId: id,
-      fields: "id, parents, mimeType",
-      supportsAllDrives: true
-    });
+    const isDescendantOfRoot = async (fileId: string, rootId: string) => {
+      const visited = new Set<string>();
+      let currentIds: string[] = [fileId];
+      let depth = 0;
 
-    const parents = meta.data.parents ?? [];
-    if (!parents.includes(rootFolderId)) {
+      while (currentIds.length > 0 && depth < 10) {
+        const nextIds: string[] = [];
+        for (const currentId of currentIds) {
+          if (visited.has(currentId)) continue;
+          visited.add(currentId);
+
+          const meta = await drive.files.get({
+            fileId: currentId,
+            fields: "id, parents",
+            supportsAllDrives: true
+          });
+
+          const parents = meta.data.parents ?? [];
+          if (parents.includes(rootId)) {
+            return true;
+          }
+
+          nextIds.push(...parents);
+        }
+
+        currentIds = nextIds;
+        depth += 1;
+      }
+
+      return false;
+    };
+
+    const allowed = await isDescendantOfRoot(id, rootFolderId);
+    if (!allowed) {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
