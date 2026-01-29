@@ -15,7 +15,7 @@
     "title": "Guido Gabriel Paris – Mechanical Engineer",
     "subtitle": "Mechanical design and technical drawing with 10+ years of experience. Based in Ragusa, Italy.",
     "primaryCta": "Download CV",
-    "secondaryCta": "Contact me"
+    "secondaryCta": "Let's work together"
   },
   "about": {
     "title": "About",
@@ -49,6 +49,7 @@
     "title": "Contact",
     "emailLabel": "Email",
     "linkedinLabel": "LinkedIn",
+    "whatsappLabel": "WhatsApp",
     "formCta": "Send a message"
   },
   "footer": {

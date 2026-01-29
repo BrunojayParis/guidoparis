@@ -162,6 +162,7 @@ export default async function Home({ params }: PageProps) {
   const cvLink = "https://example.com/Guido_Gabriel_Paris_CV.pdf";
   const email = "guidogparis@gmail.com";
   const linkedin = "https://www.linkedin.com/in/guido-gabriel-paris-7745871aa";
+  const whatsapp = "https://wa.me/qr/7OIT7T546ARPL1";
 
   return (
     <>
@@ -169,7 +170,6 @@ export default async function Home({ params }: PageProps) {
         locale={locale}
         navLinks={navLinks}
         cvLink={cvLink}
-        primaryCtaLabel={dictionary.hero.primaryCta}
         roleLabel={locale === "it" ? "Ingegnere Meccanico" : "Mechanical Engineer"}
         name="Guido Gabriel Paris"
         switcherLabels={{
@@ -183,10 +183,14 @@ export default async function Home({ params }: PageProps) {
         <HeroSection
           title={dictionary.hero.title}
           subtitle={dictionary.hero.subtitle}
-          primaryCtaLabel={dictionary.hero.primaryCta}
           secondaryCtaLabel={dictionary.hero.secondaryCta}
-          cvLink={cvLink}
           contactHref="#contact"
+          imageSrc="/images/guido-portrait.png"
+          imageAlt={
+            locale === "it"
+              ? "Ritratto professionale di Guido Gabriel Paris"
+              : "Professional portrait of Guido Gabriel Paris"
+          }
         />
 
         <AboutSection title={dictionary.about.title} body={dictionary.about.body} />
@@ -219,14 +223,15 @@ export default async function Home({ params }: PageProps) {
           title={dictionary.contact.title}
           description={
             locale === "it"
-              ? "Residente a Ragusa, Italia. Tel: +54 9 351 661 8834 | +39 351 348 5795"
-              : "Based in Ragusa, Italy. Phone: +54 9 351 661 8834 | +39 351 348 5795"
+              ? "Residente a Italia. Tel: +54 9 351 661 8834 | +39 351 348 5795"
+              : "Based in Italy. Phone: +54 9 351 661 8834 | +39 351 348 5795"
           }
           emailLabel={dictionary.contact.emailLabel}
           email={email}
           linkedinLabel={dictionary.contact.linkedinLabel}
           linkedin={linkedin}
-          formCta={dictionary.contact.formCta}
+          whatsappLabel={dictionary.contact.whatsappLabel}
+          whatsapp={whatsapp}
         />
       </main>
 
@@ -234,6 +239,7 @@ export default async function Home({ params }: PageProps) {
         cta={dictionary.footer.cta}
         links={[
           { href: linkedin, label: "LinkedIn" },
+          { href: whatsapp, label: "WhatsApp" },
           { href: cvLink, label: "CV" },
           { href: `mailto:${email}`, label: "Email" }
         ]}

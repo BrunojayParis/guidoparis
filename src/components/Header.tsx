@@ -8,7 +8,6 @@ type Props = {
   locale: Locale;
   navLinks: NavLink[];
   cvLink: string;
-  primaryCtaLabel: string;
   roleLabel: string;
   name: string;
   switcherLabels: { it: string; en: string; aria: string };
@@ -17,8 +16,6 @@ type Props = {
 export function Header({
   locale,
   navLinks,
-  cvLink,
-  primaryCtaLabel,
   roleLabel,
   name,
   switcherLabels
@@ -44,12 +41,6 @@ export function Header({
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <Link
-            href={cvLink}
-            className="hidden rounded-full border border-steel px-3 py-1.5 text-sm font-semibold text-steel transition hover:bg-steel hover:text-white sm:inline-flex"
-          >
-            {primaryCtaLabel}
-          </Link>
           <LanguageSwitcher
             currentLocale={locale}
             labels={{ it: switcherLabels.it, en: switcherLabels.en }}
